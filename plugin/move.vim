@@ -288,11 +288,14 @@ nnoremap <silent> <Plug>MoveCharLeft            :<C-u> silent call <SID>MoveChar
 if g:move_map_keys
     execute 'vmap' s:VisualMoveKey('j') '<Plug>MoveBlockDown'
     execute 'vmap' s:VisualMoveKey('k') '<Plug>MoveBlockUp'
-    execute 'vmap' s:VisualMoveKey('h') '<Plug>MoveBlockLeft'
-    execute 'vmap' s:VisualMoveKey('l') '<Plug>MoveBlockRight'
+    execute 'vmap' s:VisualMoveKey('Left') '<Plug>MoveBlockLeft'
+    execute 'vmap' s:VisualMoveKey('Right') '<Plug>MoveBlockRight'
 
     execute 'nmap' s:MoveKey('j') '<Plug>MoveLineDown'
+    execute 'nmap' s:MoveKey('Down') '<Plug>MoveLineDown'
     execute 'nmap' s:MoveKey('k') '<Plug>MoveLineUp'
-    execute 'nmap' s:MoveKey('h') '<Plug>MoveCharLeft'
-    execute 'nmap' s:MoveKey('l') '<Plug>MoveCharRight'
+    execute 'nmap' s:MoveKey('Up') '<Plug>MoveLineUp'
+    execute 'nmap' s:MoveKey('Left') '<Plug>MoveCharLeft'
+    execute 'nmap' s:MoveKey('Right') '<Plug>MoveCharRight'
 endif
+
